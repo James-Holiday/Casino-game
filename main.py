@@ -1,8 +1,18 @@
 import random
 
-print('''Welcome to the Gotham City Slots...
+print('''
+$$$$$$$$$$            
+$$$$    $$$      $$$$$$$$$$$$$ 
+$$$$    $$$    $$$    $$$ $$$$     $$$$    $$$    $$$$   $$$$ 
+$$$$$$$$$$$   $$ $$   $$$ $$$$$   $$$$$   $$ $$   $$$$$  $$$$ 
+$$$$$$$$$$$ $$     $$ $$$ $$$ $$ $$ $$$ $$     $$ $$$$$$ $$$$ 
+$$$$    $$$ $$$$$$$$$ $$$ $$$   $   $$$ $$$$$$$$$ $$$$ $$$$$$
+$$$$    $$$ $$     $$ $$$ $$$       $$$ $$     $$ $$$$  $$$$$
+$$$$$$$$$$  $$     $$ $$$ $$$       $$$ $$     $$ $$$$   $$$$
+welcome's you to The Gotham City Slots...
 Try your luck with 1000 dollars. If you run 
-out, don't worry you my buy back in...
+out, don't worry you can always buy back in...
+
 To win you must get one of the following combinations:
 Batman\tBatman\tBatman\tpays\t$500
 Robin\tRobin\tRobin\tpays\t$250
@@ -13,6 +23,8 @@ Joker\tJoker\tJoker\tpays\t$7
 Riddler\tRiddler\tRiddler\tpays\t$5
 Penguin\tjoker\tRiddler\tpays\t$-100
 ''')
+
+
 
 INIT_STAKE = 1000
 ITEMS = ["Batman", "Robin", "Alfred", "Penguin", "Joker", "Riddler"]
@@ -46,7 +58,8 @@ def askPlayer():
             print("KA-POW!!! Try again")
 
 def spinWheel():
-    randomNumber = random.randint(0, 2)
+    randomNumber = random.randint(0, 3)
+  
     return ITEMS[randomNumber]
 
 def printScore():
@@ -76,5 +89,7 @@ def printScore():
         print(firstWheel + '\t' + secondWheel + '\t' + thirdWheel + ' -- You win $' + str(win))
     else:
         print(firstWheel + '\t' + secondWheel + '\t' + thirdWheel + ' -- You lose')
+
+
 
 reel()
